@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Add Bowler";
+}
+
+@model Bowler
+
+<h1 class="card-title text-byu mt-4">Add a Bowler</h1>
+
+<div>
+    <form method="post" asp-action="AddBowler">
+        <div class="form-group">
+            <label asp-for="BowlerFirstName">First Name:</label>
+            <input class="form-control" asp-for="BowlerFirstName" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerMiddleInit">Middle Initial:</label>
+            <input class="form-control" asp-for="BowlerMiddleInit" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerLastName">Last Name:</label>
+            <input class="form-control" asp-for="BowlerLastName" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerAddress">Address:</label>
+            <input class="form-control" asp-for="BowlerAddress" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerCity">City:</label>
+            <input class="form-control" asp-for="BowlerCity" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerState">State:</label>
+            <input class="form-control" asp-for="BowlerState" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerZip">Zipcode:</label>
+            <input class="form-control" asp-for="BowlerZip" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerPhoneNumber">Phone Number:</label>
+            <input class="form-control" asp-for="BowlerPhoneNumber" /><br />
+        </div>
+        <button class="btn btn-outline-primary btn-primary" type="submit">Add Bowler</button>
+    </form>
+</div>

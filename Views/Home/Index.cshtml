@@ -1,0 +1,27 @@
+﻿@{
+}
+
+@model List<Bowler>
+
+<h1>Bowlers</h1>
+<a asp-action="AddBowler" asp-controller="Home" class="btn btn-lg btn-byu text-white">Add Bowler</a>
+
+<tr>
+    
+        
+            @foreach (var b in Model)
+            {
+                <td>
+                    <ul>
+                        <li>@b.BowlerID - @b.BowlerFirstName @b.BowlerLastName</li>
+
+                    </ul>
+                </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Home" asp-action="EditForm" asp-route-BowlerID="BowlerID">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-controller="Home" asp-action="DeleteBowler" asp-route-BowlerID="b.BowlerID">Delete</a>
+                    </td>
+             }
+</tr>

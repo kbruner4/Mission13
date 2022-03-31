@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Edit Bowler";
+}
+
+@model Bowler
+
+<h1 class="card-title text-byu mt-4">Edit a Bowler</h1>
+
+<div>
+
+    <form method="post" asp-action="EditForm">
+        <div class="form-group">
+            <input type="hidden" asp-for="BowlerID" value="@Model.BowlerID" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerFirstName">First Name:</label>
+            <input class="form-control" asp-for="BowlerFirstName" value="@Model.BowlerFirstName" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerMiddleInit">Middle Initial:</label>
+            <input class="form-control" asp-for="BowlerMiddleInit" value="@Model.BowlerMiddleInit" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerLastName">Last Name:</label>
+            <input class="form-control" asp-for="BowlerLastName" value="@Model.BowlerLastName" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerAddress">Address:</label>
+            <input class="form-control" asp-for="BowlerAddress" value="@Model.BowlerAddress" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerCity">City:</label>
+            <input class="form-control" asp-for="BowlerCity" value="@Model.BowlerCity" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerState">State:</label>
+            <input class="form-control" asp-for="BowlerState" value="@Model.BowlerState" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerZip">Zipcode:</label>
+            <input class="form-control" asp-for="BowlerZip" value="@Model.BowlerZip" /><br />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BowlerPhoneNumber">Phone Number:</label>
+            <input class="form-control" asp-for="BowlerPhoneNumber" value="@Model.BowlerPhoneNumber" /><br />
+        </div>
+        <button class="btn btn-outline-primary btn-primary" type="submit">Submit</button>
+    </form>
+</div>
